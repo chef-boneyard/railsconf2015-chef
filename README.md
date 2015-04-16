@@ -33,7 +33,7 @@ The following steps were taken to build the package:
 1. Run the `build_ruby.sh` script on that instance
 1. Publish the resulting debian package to s3 at - [https://s3.amazonaws.com/chef-railsconf-2015/ruby-2.2.2_amd64.deb]( https://s3.amazonaws.com/chef-railsconf-2015/ruby-2.2.2_amd64.deb)
 
-The sha256sum of the published package is 6ea925b1b610a722375971100951866ce0c182b5d47bf714debd0d0b95d9f6d
+The sha256sum of the published package is `6ea925b1b610a722375971100951866ce0c182b5d47bf714debd0d0b95d9f6d`
 
 
 
