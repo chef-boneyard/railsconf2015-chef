@@ -12,6 +12,8 @@ Participants of the workshop will complete hands-on labs that will practice test
 
 Our goal is to build the infrastructure required to run a [basic Rails application](https://github.com/nellshamrell/widgetworld).
 
+**NOTE**:  While we will be following a test-driven approach and the end result should work, we won't necessarily be following all of the best-practices for everything we build.
+
 ## Infrastructure Requirements
 
 The various requirements for our infrastructure include:
@@ -23,7 +25,7 @@ The various requirements for our infrastructure include:
 * A Rails application - [Widget World](https://github.com/nellshamrell/widgetworld)
 
 
-### Ruby
+#### Ruby
 
 Our application will use Ruby 2.2.2.  We have created a debian package that targets our operating system (Ubuntu 12.04).  The package was built with [FPM](https://rubygems.org/gems/fpm/versions/1.3.3) using the [build_ruby.sh](build_ruby.sh) script in this repository.
 
