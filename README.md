@@ -21,9 +21,8 @@ The various requirements for our infrastructure include:
 * A linux-based operating system - Ubuntu 12.04
 * Ruby
 * An application server - [Phusion Passenger for Apache](https://www.phusionpassenger.com/)
-* A relational database management system - [PostgreSQL Database](http://www.postgresql.org/)
+* A relational database management system (RDBMS) - [PostgreSQL Database](http://www.postgresql.org/)
 * A Rails application - [Widget World](https://github.com/nellshamrell/widgetworld)
-
 
 #### Ruby
 
@@ -35,11 +34,25 @@ The following steps were taken to build the package:
 1. Run the `build_ruby.sh` script on that instance
 1. Publish the resulting debian package to s3 at - [https://s3.amazonaws.com/chef-railsconf-2015/ruby-2.2.2_amd64.deb]( https://s3.amazonaws.com/chef-railsconf-2015/ruby-2.2.2_amd64.deb)
 
-[Widget World Ruby Cookbook](ruby_cookbook.md)
+Build a [Widget World Ruby Cookbook](ruby_cookbook.md).
 
 #### Application Server
 
 Our application will use [Phusion Passenger for Apache](https://www.phusionpassenger.com/).  There may be other applications within our company that require Apache, but not Passenger.  We will manage both components in individual cookbooks.
 
+Build the following cookbooks:
+
 * [Widget World Apache Cookbook](apache_cookbook.md)
 * [Widget World Passenger Cookbook](passenger_cookbook.md)
+
+#### RDBMS
+
+Our application will use [PostgreSQL](http://www.postgresql.org/) version 9.1.
+
+Build a [Widget World PostgreSQL Cookbook](postgres_cookbook.md).
+
+#### Rails Application
+
+Our Rails Application is [available on GitHub](https://github.com/nellshamrell/widgetworld/releases).  Deploy the [initial release (v 0.0.1)](https://github.com/nellshamrell/widgetworld/releases) of this application.  This is the most advanced cookbook we'll create.
+
+Build a [Widget World Application Cookbook](application_cookbook.md)

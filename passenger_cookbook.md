@@ -9,6 +9,7 @@ widget_world_passenger
 
 #### Important details
 
+* This cookbook can be built and tested on the provided workstation.
 * Converging the node a second time should not update any resources.
 
 #### Documentation and Hints
