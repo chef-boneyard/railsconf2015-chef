@@ -25,7 +25,7 @@ The various requirements for our infrastructure include:
 
 ### Ruby
 
-Our application will use Ruby 2.2.2.  We have created a debian package that targets our operating system (Ubuntu 12.04).  The package was built with [FPM](https://rubygems.org/gems/fpm/versions/1.3.3) using the `[build_ruby.sh](build_ruby.sh)` script in this repository.
+Our application will use Ruby 2.2.2.  We have created a debian package that targets our operating system (Ubuntu 12.04).  The package was built with [FPM](https://rubygems.org/gems/fpm/versions/1.3.3) using the [build_ruby.sh](build_ruby.sh) script in this repository.
 
 The following steps were taken to build the package:
 
