@@ -23,5 +23,9 @@ describe 'widget_world_application::deploy_user' do
       expect(chef_run).to create_user('deploy')
     end
 
+    it 'creates the deploy user with a uid of 500' do
+      expect(chef_run).to create_user('deploy').with_uid(500)
+    end
+
   end
 end
