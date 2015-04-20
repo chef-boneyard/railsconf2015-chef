@@ -19,6 +19,6 @@ widget_world_postgres
 * [PostgreSQL install instructions for Ubuntu](https://help.ubuntu.com/community/PostgreSQL)
 * [Chef Resource Reference](http://docs.chef.io/resources.html)
   * [execute resource](http://docs.chef.io/resource_execute.html)
-  * [Guard attributes](http://docs.chef.io/resources.html#guards)
-  * [Sensitive attribute](http://docs.chef.io/resources.html#attributes)
+  * [package resource](http://docs.chef.io/resource_package.html)
+  * [template resource](http://docs.chef.io/resource_template.html)
 * [Documentation for including recipes](https://docs.chef.io/recipes.html#include-recipes)

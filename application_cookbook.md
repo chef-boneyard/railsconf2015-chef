@@ -31,4 +31,3 @@ widget_world_application
   * [template resource](http://docs.chef.io/resource_template.html)
   * [user resource](http://docs.chef.io/resource_user.html)
 * [Documentation for including recipes](https://docs.chef.io/recipes.html#include-recipes)
-
