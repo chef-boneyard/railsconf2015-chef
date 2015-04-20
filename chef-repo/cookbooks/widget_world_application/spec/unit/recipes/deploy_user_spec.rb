@@ -6,7 +6,7 @@
 
 require 'spec_helper'
 
-describe '.::deploy_user' do
+describe 'widget_world_application::deploy_user' do
 
   context 'When all attributes are default, on an unspecified platform' do
 
@@ -17,6 +17,10 @@ describe '.::deploy_user' do
 
     it 'converges successfully' do
       chef_run # This should not raise an error
+    end
+    
+    it 'creates the deploy user' do
+      expect(chef_run).to create_user('deploy')
     end
 
   end
