@@ -5,4 +5,4 @@ license          'all_rights'
 description      'Installs/Configures widget_world_passenger'
 long_description 'Installs/Configures widget_world_passenger'
 version          '0.1.0'
-
+depends          'apt'
