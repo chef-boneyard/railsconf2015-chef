@@ -19,6 +19,10 @@ describe 'widget_world_postgres::default' do
       chef_run # This should not raise an error
     end
 
+    it 'includes the default apt recipe which refreshes the apt cache' do
+      expect(chef_run).to include_recipe 'apt::default'
+    end
+
     it 'installs postgresql package' do
       expect(chef_run).to install_package 'postgresql'
     end
