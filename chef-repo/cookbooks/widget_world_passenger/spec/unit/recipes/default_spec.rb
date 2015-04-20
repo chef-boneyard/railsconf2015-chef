@@ -18,6 +18,10 @@ describe 'widget_world_passenger::default' do
     it 'converges successfully' do
       chef_run # This should not raise an error
     end
+    
+    it 'sets-up the passenger apt repository' do
+      expect(chef_run).to add_apt_repository('passenger')
+    end
 
   end
 end
