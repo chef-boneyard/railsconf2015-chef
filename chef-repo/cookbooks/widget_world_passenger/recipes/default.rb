@@ -9,3 +9,5 @@ apt_repository 'passenger' do
   keyserver 'keyserver.ubuntu.com'
   key '561F9B9CAC40B2F7'
 end
+
+package 'libapache2-mod-passenger'
