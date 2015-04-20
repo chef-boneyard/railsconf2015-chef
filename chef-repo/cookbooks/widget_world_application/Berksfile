@@ -1,3 +1,5 @@
 source "https://supermarket.chef.io"
 
 metadata
+
+cookbook 'widget_world_postgres', path: '../widget_world_postgres'
