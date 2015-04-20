@@ -13,7 +13,15 @@ suites:
     run_list:
       - recipe[widget_world_application::database_user]
     attributes:
+      widget_world_application:
+        database:
+          username: 'widgetworld'
+          password: 'mysecret'
   - name: default
     run_list:
       - recipe[widget_world_application::default]
     attributes:
+      widget_world_application:
+        database:
+          username: 'widgetworld'
+          password: 'mysecret'
