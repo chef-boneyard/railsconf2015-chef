@@ -10,4 +10,6 @@ user 'deploy' do
   shell '/bin/bash'
 end
 
-group 'deploy'
+group 'deploy' do
+  gid 500
+end
