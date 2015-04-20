@@ -9,3 +9,5 @@ user 'deploy' do
   manage_home true
   shell '/bin/bash'
 end
+
+group 'deploy'
