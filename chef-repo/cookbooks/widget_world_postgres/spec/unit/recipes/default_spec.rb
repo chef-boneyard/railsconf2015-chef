@@ -35,5 +35,14 @@ describe 'widget_world_postgres::default' do
       expect(chef_run).to install_package 'libpq-dev'
     end
 
+    it 'renders pg_hba.conf file' do
+      expect(chef_run).to render_file '/etc/postgresql/9.1/main/pg_hba.conf'
+    end
+
+    it 'reloads the postgres config when pg_hba.conf is updated' do
+      template = chef_run.template('/etc/postgresql/9.1/main/pg_hba.conf')
+      expect(template).to notify('execute[reload postges]').to(:run).immediately
+    end
+
   end
 end
