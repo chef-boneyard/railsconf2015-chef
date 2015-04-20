@@ -5,4 +5,5 @@ license          'all_rights'
 description      'Installs/Configures widget_world_postgres'
 long_description 'Installs/Configures widget_world_postgres'
 version          '0.1.0'
+depends          'apt'
 
