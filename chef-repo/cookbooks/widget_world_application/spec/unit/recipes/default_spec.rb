@@ -19,5 +19,16 @@ describe 'widget_world_application::default' do
       chef_run # This should not raise an error
     end
 
+    it 'creates the releases directory' do
+      expect(chef_run).to create_directory('/var/www/railsapps/widgetworld/releases')
+    end
+
+    it 'creates the releases directory with proper ownership' do
+      expect(chef_run).to create_directory('/var/www/railsapps/widgetworld/releases').with(
+        owner: 'deploy',
+        group: 'deploy'
+      )
+    end
+
   end
 end
