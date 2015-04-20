@@ -34,6 +34,10 @@ describe 'widget_world_application::deploy_user' do
     it 'creates the deploy group with a gid of 500' do
       expect(chef_run).to create_group('deploy').with_gid(500)
     end
+    
+    it 'generates a sudoers rule for the deploy user' do
+      expect(chef_run).to render_file('/etc/sudoers.d/deploy')
+    end
 
   end
 end
