@@ -7,3 +7,4 @@
 include_recipe 'apt::default'
 
 package 'postgresql'
+package 'postgresql-contrib'
