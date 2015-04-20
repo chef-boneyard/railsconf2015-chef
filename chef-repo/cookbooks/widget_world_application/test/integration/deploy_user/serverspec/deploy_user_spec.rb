@@ -3,15 +3,19 @@ require 'spec_helper'
 describe 'widget_world_application::deploy_user' do
 
   it 'creates the deploy user' do
-    expect(user 'deploy').to exist
+    expect(user('deploy')).to exist
   end
 
   it 'gives the deploy user a uid of 500' do
-    expect(user 'deploy').to have_uid(500)
+    expect(user('deploy')).to have_uid(500)
   end
 
   it 'creates a home directory for the deploy user' do
     expect(user('deploy')).to have_home_directory('/home/deploy')
   end
 
+  it 'provides a login shell for the deploy user' do
+    expect(user('deploy')).to have_login_shell('/bin/bash')
+  end
+  
 end
