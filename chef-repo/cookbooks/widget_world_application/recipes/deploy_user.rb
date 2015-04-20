@@ -7,4 +7,5 @@
 user 'deploy' do
   uid 500
   manage_home true
+  shell '/bin/bash'
 end
