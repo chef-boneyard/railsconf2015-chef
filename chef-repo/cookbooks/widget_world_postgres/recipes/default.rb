@@ -10,8 +10,7 @@ package 'postgresql'
 package 'postgresql-contrib'
 package 'libpq-dev'
 
-execute 'reload postges' do
-  command 'pg_ctl reload'
+service 'postgresql' do
   action :nothing
 end
 
@@ -20,5 +19,5 @@ template '/etc/postgresql/9.1/main/pg_hba.conf' do
   owner 'postgres'
   group 'postgres'
   mode '0640'
-  notifies :run, 'execute[reload postges]', :immediately
+  notifies :restart, 'service[postgresql]', :immediately
 end
