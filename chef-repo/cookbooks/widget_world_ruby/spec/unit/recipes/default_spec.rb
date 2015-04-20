@@ -18,6 +18,10 @@ describe 'widget_world_ruby::default' do
     it 'converges successfully' do
       chef_run # This should not raise an error
     end
+    
+    it 'downloads the debian package' do
+      expect(chef_run).to create_remote_file('/var/tmp/ruby-2.2.2_amd64.deb')
+    end
 
   end
 end
