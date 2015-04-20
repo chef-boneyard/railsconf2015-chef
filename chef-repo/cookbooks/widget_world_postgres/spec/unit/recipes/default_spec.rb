@@ -19,5 +19,9 @@ describe 'widget_world_postgres::default' do
       chef_run # This should not raise an error
     end
 
+    it 'installs postgresql package' do
+      expect(chef_run).to install_package 'postgresql'
+    end
+
   end
 end
