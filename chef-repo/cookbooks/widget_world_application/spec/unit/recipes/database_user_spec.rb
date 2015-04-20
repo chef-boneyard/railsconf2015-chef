@@ -18,6 +18,10 @@ describe 'widget_world_application::database_user' do
     it 'converges successfully' do
       chef_run # This should not raise an error
     end
+    
+    it 'creates the database user' do
+      expect(chef_run).to run_execute('create new postgres user')
+    end
 
   end
 end
