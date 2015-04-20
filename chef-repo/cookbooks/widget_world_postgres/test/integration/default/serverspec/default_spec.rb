@@ -9,4 +9,8 @@ describe 'widget_world_postgres::default' do
     expect(package('postgresql')).to be_installed
   end
 
+  it 'installs postgres-contrib' do
+    expect(package('postgresql-contrib')).to be_installed
+  end
+
 end
