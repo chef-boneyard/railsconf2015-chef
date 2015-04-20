@@ -13,4 +13,8 @@ describe 'widget_world_postgres::default' do
     expect(package('postgresql-contrib')).to be_installed
   end
 
+  it 'installs libpq-dev' do
+    expect(package('libpq-dev')).to be_installed
+  end
+
 end

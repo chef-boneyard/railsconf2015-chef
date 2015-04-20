@@ -31,5 +31,9 @@ describe 'widget_world_postgres::default' do
       expect(chef_run).to install_package 'postgresql-contrib'
     end
 
+    it 'installs libpq-dev package' do
+      expect(chef_run).to install_package 'libpq-dev'
+    end
+
   end
 end
