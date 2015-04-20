@@ -22,6 +22,10 @@ describe 'widget_world_passenger::default' do
     it 'sets-up the passenger apt repository' do
       expect(chef_run).to add_apt_repository('passenger')
     end
+    
+    it 'installs the passenger package for apache' do
+      expect(chef_run).to install_package('libapache2-mod-passenger')
+    end
 
   end
 end
