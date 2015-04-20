@@ -17,6 +17,10 @@ suites:
         database:
           username: 'widgetworld'
           password: 'mysecret'
+  - name: deploy_user
+    run_list:
+      - recipe[widget_world_application::deploy_user]
+    attributes:
   - name: default
     run_list:
       - recipe[widget_world_application::default]
