@@ -17,5 +17,6 @@ widget_world_ruby
 #### Documentation and Hints
 
 * [Chef Resource Reference](http://docs.chef.io/resources.html)
-  * [remote_file resource](http://docs.chef.io/resource_remote_file.html)
   * [dpkg_package resource](http://docs.chef.io/resource_dpkg_package.html)
+  * [package resource](http://docs.chef.io/resource_package.html)
+  * [remote_file resource](http://docs.chef.io/resource_remote_file.html)

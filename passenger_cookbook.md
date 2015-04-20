@@ -19,3 +19,5 @@ widget_world_passenger
 * The [apt cookbook](https://supermarket.chef.io/cookbooks/apt) on the [Supermarket](https://supermarket.chef.io) includes a resource to help manage apt repositories.
 * `passenger -v` will show you the version of Passenger that is installed.
 * [Chef Resource Reference](http://docs.chef.io/resources.html)
+  * [apt_repository resource](https://github.com/opscode-cookbooks/apt#apt_repository)
+  * [package resource](http://docs.chef.io/resource_package.html)
