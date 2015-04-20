@@ -25,8 +25,8 @@ describe 'widget_world_application::deploy_user' do
   it 'creates the deploy group' do
     expect(group('deploy')).to exist
   end
-  #
-  # it 'gives the deploy group a gid of 500' do
-  #   expect group('deploy').to have_gid(500)
-  # end
+
+  it 'gives the deploy group a gid of 500' do
+    expect(group('deploy')).to have_gid(500)
+  end
 end
