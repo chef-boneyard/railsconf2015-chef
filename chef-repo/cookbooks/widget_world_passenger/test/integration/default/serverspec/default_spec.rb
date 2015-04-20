@@ -2,11 +2,8 @@ require 'spec_helper'
 
 describe 'widget_world_passenger::default' do
 
-  # Serverspec examples can be found at
-  # http://serverspec.org/resource_types.html
-  
-  it 'does something' do
-    skip 'Replace this with meaningful tests'
+  it 'installs passenger version 5.0.6' do
+    expect(command('passenger -v').stdout).to match(/5\.0\.6)
   end
 
 end
