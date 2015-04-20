@@ -22,6 +22,10 @@ describe 'widget_world_ruby::default' do
     it 'downloads the debian package' do
       expect(chef_run).to create_remote_file('/var/tmp/ruby-2.2.2_amd64.deb')
     end
+    
+    it 'installs the debian package' do
+      expect(chef_run).to install_dpkg_package('ruby-2.2.2')
+    end
 
   end
 end
