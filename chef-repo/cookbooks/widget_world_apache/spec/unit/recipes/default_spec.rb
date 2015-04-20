@@ -18,6 +18,10 @@ describe 'widget_world_apache::default' do
     it 'converges successfully' do
       chef_run # This should not raise an error
     end
+    
+    it 'installs the apache package' do
+      expect(chef_run).to install_package('apache2')
+    end
 
   end
 end
