@@ -29,4 +29,8 @@ describe 'widget_world_application::deploy_user' do
   it 'gives the deploy group a gid of 500' do
     expect(group('deploy')).to have_gid(500)
   end
+  
+  it 'creates a rule for sudoers' do
+    expect(file('/etc/sudoers.d/deploy')).to be_file
+  end
 end
