@@ -10,4 +10,8 @@ describe 'widget_world_application::deploy_user' do
     expect(user 'deploy').to have_uid(500)
   end
 
+  it 'creates a home directory for the deploy user' do
+    expect(user('deploy')).to have_home_directory('/home/deploy')
+  end
+
 end
