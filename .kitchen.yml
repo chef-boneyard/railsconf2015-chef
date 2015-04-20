@@ -1,0 +1,30 @@
+---
+driver:
+  name: ec2
+  aws_access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+  aws_secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+  aws_ssh_key_id: <%= ENV['AWS_KEYPAIR_NAME'] %>
+  ssh_key: <%= ENV['AWS_KEY_PATH'] %>
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: centos-6.4
+    driver:
+      image_id: ami-e274738a
+      availability_zone: us-east-1c
+      tags:
+        class: railsconf2015
+        name: railsconf2015-workstation
+        removeafter: 2015-04-24
+        x-created-by: nharvey
+        x-project: railsconf2015
+      security_group_ids: ['sg-29d3c14c']
+
+suites:
+<% number_of_students = 1 %>
+<% (1..number_of_students).each do |i| %>
+  - name: student0<%=i%>
+<% end %>
+
