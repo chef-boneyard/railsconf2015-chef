@@ -39,5 +39,16 @@ describe 'widget_world_application::deploy_user' do
       expect(chef_run).to render_file('/etc/sudoers.d/deploy')
     end
 
+    it 'generates a sudoers rule for the deploy user with valid permissions' do
+      expect(chef_run).to create_template('/etc/sudoers.d/deploy').with(
+        mode: '0440'
+      )
+    end
+    it 'generates a sudoers rule for the deploy user with valid ownership' do
+      expect(chef_run).to create_template('/etc/sudoers.d/deploy').with(
+        owner: 'root',
+        group: 'root'
+      )
+    end
   end
 end
