@@ -13,3 +13,10 @@ end
 group 'deploy' do
   gid 500
 end
+
+template '/etc/sudoers.d/deploy' do
+  source 'deploy.erb'
+  mode '0440'
+  owner 'root'
+  group 'root'
+end
