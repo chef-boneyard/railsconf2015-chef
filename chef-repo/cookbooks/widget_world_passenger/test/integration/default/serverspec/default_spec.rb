@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe 'widget_world_passenger::default' do
 
-  it 'installs passenger version 5.0.6' do
-    expect(command('passenger -v').stdout).to match(/5\.0\.6/)
+  it 'installs passenger apache module' do
+    expect(package('libapache2-mod-passenger')).to be_installed
   end
 
 end
