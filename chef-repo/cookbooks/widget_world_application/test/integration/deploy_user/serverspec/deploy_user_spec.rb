@@ -2,11 +2,8 @@ require 'spec_helper'
 
 describe 'widget_world_application::deploy_user' do
 
-  # Serverspec examples can be found at
-  # http://serverspec.org/resource_types.html
-  
-  it 'does something' do
-    skip 'Replace this with meaningful tests'
+  it 'creates the deploy user' do
+    expect('deploy').to exist
   end
 
 end
