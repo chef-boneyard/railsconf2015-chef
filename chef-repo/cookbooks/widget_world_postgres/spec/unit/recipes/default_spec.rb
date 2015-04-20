@@ -23,5 +23,9 @@ describe 'widget_world_postgres::default' do
       expect(chef_run).to install_package 'postgresql'
     end
 
+    it 'installs postgresql-contrib package' do
+      expect(chef_run).to install_package 'postgresql-contrib'
+    end
+
   end
 end
