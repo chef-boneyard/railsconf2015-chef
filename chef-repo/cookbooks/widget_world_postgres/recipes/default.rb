@@ -9,6 +9,7 @@ include_recipe 'apt::default'
 package 'postgresql'
 package 'postgresql-contrib'
 package 'libpq-dev'
+package 'build-essential' # required when installing the pg gem
 
 service 'postgresql' do
   action :nothing
