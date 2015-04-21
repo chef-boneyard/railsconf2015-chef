@@ -41,7 +41,11 @@ describe 'widget_world_postgres::default' do
 
     it 'reloads the postgres config when pg_hba.conf is updated' do
       template = chef_run.template('/etc/postgresql/9.1/main/pg_hba.conf')
-      expect(template).to notify('execute[reload postges]').to(:run).immediately
+      expect(template).to notify('service[postgresql]').to(:restart).immediately
+    end
+
+    it 'installs the build-essential package which is required for the pg gem' do
+      expect(chef_run).to install_package 'build-essential'
     end
 
   end
