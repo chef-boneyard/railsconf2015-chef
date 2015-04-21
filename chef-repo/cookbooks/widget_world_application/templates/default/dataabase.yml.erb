@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: widgetworld_development
+  username: widgetworld
+  password: super_secret
+
+test:
+  <<: *default
+  database: widgetworld_test
+
+production:
+  <<: *default
+  database: widgetworld_production
+  username: <%= node['widget_world_application']['database']['username'] %>
+  password: <%= node['widget_world_application']['database']['password'] %>
