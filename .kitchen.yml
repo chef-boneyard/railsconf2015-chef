@@ -23,7 +23,7 @@ platforms:
       security_group_ids: ['sg-29d3c14c']
 
 suites:
-<% number_of_students = 1 %>
+<% number_of_students = 104 %>
 <% (1..number_of_students).each do |i| %>
   - name: student0<%=i%>
 <% end %>
