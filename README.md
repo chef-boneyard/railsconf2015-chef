@@ -14,6 +14,18 @@ Our goal is to build the infrastructure required to run a [basic Rails applicati
 
 **NOTE**:  While we will be following a test-driven approach and the end result should work, we won't necessarily be following all of the best-practices for everything we build.
 
+## This Repository
+
+The master branch is where we start.  There are many other branches here that build on one another working toward a working example.
+
+* [master](https://github.com/chef/railsconf2015-chef)
+* [labs/widget_world_ruby](https://github.com/chef/railsconf2015-chef/tree/labs/widget_world_ruby) - a cookbook to install Ruby 2.2.2
+* [labs/widget_world_apache](https://github.com/chef/railsconf2015-chef/tree/labs/widget_world_apache) - a cookbook to install Apache
+* [labs/widget_world_passenger](https://github.com/chef/railsconf2015-chef/tree/labs/widget_world_passenger) - a cookbook for managing Passenger
+* [labs/widget_world_postgres](https://github.com/chef/railsconf2015-chef/tree/labs/widget_world_postgres) - a cookbook for PostgreSQL
+* [labs/widget_world_application](https://github.com/chef/railsconf2015-chef/tree/labs/widget_world_application) - the fully deployed application
+* [labs/foodcritic](https://github.com/chef/railsconf2015-chef/tree/labs/foodcritic) - Fix a foodcritic violation or two
+
 ## Infrastructure Requirements
 
 The various requirements for our infrastructure include:
