@@ -1,0 +1,9 @@
+source "https://supermarket.chef.io"
+
+metadata
+
+cookbook 'widget_world_postgres', path: '../widget_world_postgres'
+
+cookbook 'widget_world_apache', path: '../widget_world_apache'
+cookbook 'widget_world_passenger', path: '../widget_world_passenger'
+cookbook 'widget_world_ruby', path: '../widget_world_ruby'

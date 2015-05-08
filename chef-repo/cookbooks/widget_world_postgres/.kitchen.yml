@@ -1,0 +1,15 @@
+---
+driver:
+  name: digitalocean
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-12-04-x64
+
+suites:
+  - name: default
+    run_list:
+      - recipe[widget_world_postgres::default]
+    attributes:

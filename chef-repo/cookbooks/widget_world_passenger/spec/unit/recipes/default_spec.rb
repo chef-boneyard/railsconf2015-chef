@@ -1,12 +1,12 @@
 #
-# Cookbook Name:: widget_world_ruby
+# Cookbook Name:: widget_world_passenger
 # Spec:: default
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
 require 'spec_helper'
 
-describe 'widget_world_ruby::default' do
+describe 'widget_world_passenger::default' do
 
   context 'When all attributes are default, on an unspecified platform' do
 
@@ -19,16 +19,12 @@ describe 'widget_world_ruby::default' do
       chef_run # This should not raise an error
     end
     
-    it 'downloads the debian package' do
-      expect(chef_run).to create_remote_file('/var/tmp/ruby-2.2.2_amd64.deb')
+    it 'sets-up the passenger apt repository' do
+      expect(chef_run).to add_apt_repository('passenger')
     end
     
-    it 'installs the debian package' do
-      expect(chef_run).to install_dpkg_package('ruby-2.2.2')
-    end
-    
-    it 'installs dependencies' do
-      expect(chef_run).to install_package('libgdbm3')
+    it 'installs the passenger package for apache' do
+      expect(chef_run).to install_package('libapache2-mod-passenger')
     end
 
   end
